@@ -1,6 +1,10 @@
 ---
 layout: project
 title:  "PhD Thesis Work"
+<<<<<<< HEAD
+=======
+date:   2015-11-26 18:06:56 -0500
+>>>>>>> 2b95812365aa34bc3bdbe25135b9a8e5c5a29f7c
 category: project
 ---
 As high-energy nuclear physicists, our goal is to develop a thorough understanding of the phase diagram of nuclear matter. This nuclear phase diagram defines how matter transforms with a change in temperature and/or chemical potential. Unfortunately, due to the complexity of studying the phase diagram, little is known of its features and the form that we use today is derived mainly from conjecture.
