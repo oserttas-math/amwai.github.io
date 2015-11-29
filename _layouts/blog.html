@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<!--
+
+This template is based on Prologue by HTML5 UP and modified by Alex Mwai
+
+-->
+<html>
+	<head>
+		<title>Alex Mwai's blog</title>
+		{% include head.html %}
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+
+							<h1> <a href="/index.html" id="title">Alex Mwai</a></h1>
+							<p>Nuclear Physicist &nbsp;&bull;&nbsp; Developer &nbsp;&bull;&nbsp; Lover of all things data</p>
+
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+
+							{% include sidelinks.html %}
+
+						</nav>
+
+				</div>
+				
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+
+				<!-- Blog -->
+					<section id="blog" class="two">
+						<div class="container">
+
+							<header>
+
+								<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+
+							</header>
+
+							<p>{{ content }}</p>
+
+
+						</div>
+					</section>
+
+
+			</div>
+
+		<!-- Footer -->
+			<!--<div id="footer">
+
+				{% include copyright.html %}
+				{% include social-icons.html %}
+
+			</div> -->
+	 	
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
