@@ -1556,7 +1556,8 @@
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		/*color: #888; AX*/
+                color: #474747;
 	}
 
 		body.is-loading * {
@@ -1575,12 +1576,14 @@
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		/*color: #888; AX*/
+                color: #fff661;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		color: #666;
+		/*color: #666; AX*/
+                color: #333333;
 		line-height: 1.5em;
 	}
 
@@ -1590,7 +1593,8 @@
 	}
 
 		h1 a strong, h2 a strong, h3 a strong, h4 a strong, h5 a strong, h6 a strong {
-			color: #333;
+			 /*color: #333; AX*/
+                         color: #0a0a0a;
 		}
 
 	h2 {
@@ -1599,11 +1603,13 @@
 	}
 
 		h2.alt {
-			color: #888;
+			/*color: #888; AX*/
+                        color: #fff661;
 		}
 
 			h2.alt strong {
-				color: #666;
+				/*color: #666; AX*/
+                                color: #333;
 			}
 
 	h3 {
@@ -2014,7 +2020,7 @@
 			bottom: 0;
 			width: 100%;
 		}
-
+                
 		#header .icons {/*attributes for the social media icons*/
 			font-size: 0.8em;
 			margin: 0 0 1em 0;
@@ -2026,13 +2032,14 @@
 				-moz-transition: color 0.35s ease-in-out;
 				-webkit-transition: color 0.35s ease-in-out;
 				-ms-transition: color 0.35s ease-in-out;
-				transition: color 0.35s ease-in-out;
+				transition: color 0.35s ease-in-out;8
 			}
-
+                         
 				#header .icons a:hover {
 					color: #fff;/*AX to modify*/
-				}
 
+				}
+                              
 	#logo {
 		position: relative;
 		margin: 1.75em 1.5em 1.5em 1.5em;
@@ -2139,13 +2146,18 @@
 	}
 
 		#main > section {
-			margin: 0;
+                        margin: 0;
 			overflow: hidden;
 			padding: 4em 0;
 			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
-			text-align: center;
+			text-align: left; /*AX*/
 			background-image: url("images/overlay.png");
-		}
+                       
+		} 
+                       #main > section h2, #main > section h3, #main > section h4, #main > section h5, #main > section h6 {
+                                        color: inherit;
+                                        text-align: center; /*AX*/
+                                }
 
 			#main > section.dark {
 				color: #ddd;
