@@ -1557,7 +1557,8 @@
 		font-weight: 300;
 		line-height: 1.75em;
 		/*color: #888; AX*/
-                color: #474747;
+                /*color: #474747;*/
+                color: #000000;
 	}
 
 		body.is-loading * {
@@ -2154,10 +2155,16 @@
 			background-image: url("images/overlay.png");
                        
 		} 
-                       #main > section h2, #main > section h3, #main > section h4, #main > section h5, #main > section h6 {
-                                        color: inherit;
+                       #main > section h2, #main > section h3{
+                                        /*color: inherit; AX*/
+                                        color: #000000;
                                         text-align: center; /*AX*/
                                 }
+
+                      #main > section h4, #main > section h5, #main > section h6{
+                                       color: #000000;
+                                       text-align: left;
+                       }
 
 			#main > section.dark {
 				color: #ddd;
@@ -2194,7 +2201,8 @@
 			}
 
 			#main > section.two {
-				background-color: #f5fafa;
+				/*background-color: #f5fafa; AX*/
+				background-color: #ffffff;
 			}
                     		#main > section.two h2:hover, h1:hover {
                                 	color: ##0000FF;/*AX*/
