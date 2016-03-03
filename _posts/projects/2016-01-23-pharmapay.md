@@ -1,6 +1,6 @@
 ---
 layout: notebook
-title:  "Spending in the Health Care Industry"
+title:  "Sales and Spending in the Health Care Industry"
 date:   2016-01-23 18:06:56 -0500
 category: project
 ---
