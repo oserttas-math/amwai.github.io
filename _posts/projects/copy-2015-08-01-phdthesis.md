@@ -41,7 +41,7 @@ You can read more about the experiment [here](http://www.phenix.bnl.gov/). You c
 
 Mwai, A. Beam-Energy and System-Size Dependence of the Space-Time Extent of the Pion Emission Source Produced in Heavy Ion Collisions. Ph.D. Dissertation, Stony Brook University, Stony Brook, NY, 2014.
 
-Adare, A.; et al. Comparison of the Space-Time Extent of the Emission Source in d+Au and Au+Au Collisions at $\sqrt{s_{NN}}$ = 200 GeV. Nucl.Phys. 2014, A931:1082-1087.
+Adare, A.; et al. Comparison of the Space-Time Extent of the Emission Source in d+Au and Au+Au Collisions at $\sqrt{s_{NN}}$ = 200 GeV. Nucl.Phys. 2014, A931:1082â1087.
 
 ### Papers Under Review
 
@@ -50,17 +50,3 @@ Adare, A.; et al. Beam-Energy and System-Size Dependence of the Space-Time Exten
 ### Conference Proceedings
 
 Mwai, A. A Comparison of HBT Measurements for d+Au and Au+Au Collision Systems at $\sqrt{s_{NN}}$ = 200 GeV. J.Phys.Conf.Ser. 2014, 535:012025.
-
-### Selected Conference Presentations
-
-Mwai, A. Recent Results from the PHENIX Beam Energy Scan Program. Paper presented at the Twelfth Conference on the Intersections of Particle and Nuclear Physics, Vail, Colorado, May 19-24, 2015.
-
-Mwai, A. Au+Au Beam Energy Dependence of HBT Measurements for Charged Pions at RHIC-PHENIX. Paper presented at the Fall Meeting of the American Physical Society Division of Nuclear Physics, Newport News, Virginia, October 23-26, 2013.
-
-Mwai, A.; Lacey, R. A. HBT Measurements for Charged Pions in Au+Au Collisions at âsNN = 39, 62.4, an 200 GeV. Paper presented at the American Physical Society April Meeting, Atlanta, Georgia, March 31-April 3, 2012.
-
-### Media
-
-[The Owl Shift at STAR and PHENIX: https://www.bnl.gov/rhic/news2/news.asp?a=3118&t=today](https://www.bnl.gov/rhic/news2/news.asp?a=3118&t=today)
-<br>
-[PHENIX profile: https://www.phenix.bnl.gov/WWW/pub/awards/html/mwai_alex.html](https://www.phenix.bnl.gov/WWW/pub/awards/html/mwai_alex.html)
