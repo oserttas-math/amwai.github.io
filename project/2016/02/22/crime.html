@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+
+This template is based on Prologue by HTML5 UP and modified by Alex Mwai
+
+-->
+<html>
+	<head>
+		<title>Alex Mwai's blog</title>
+		<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+<!--<link rel="stylesheet" href="assets/css/main.css" /> --> 
+<link rel="stylesheet" href="/projects/assets/css/main.css" />
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script> <!--prettify-->
+<!--<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?;skin=sunburst"></script>--> <!--prettify-->
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+
+							<h1> <a href="/index.html" id="title">Alex Mwai</a></h1>
+							<p>Nuclear Physicist &nbsp;&bull;&nbsp; Developer &nbsp;&bull;&nbsp; Lover of all things data</p>
+
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+
+							<ul>
+
+	<li><a href="/index.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
+        <li><a href="/index.html#one" id="About-link" class="skel-layers-ignoreHref"><span class="icon fa-italic">About</span></a></li>
+	<!--<li><a href="/blog/index.html" id="Myblog-link" class="skel-layers-ignoreHref"><span class="icon fa-bold">Blog</span></a></li>-->
+	<li><a href="/projects/index.html" id="Myprojects-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Projects</span></a></li>
+        <li><a href="https://github.com/amwai" id="Code-link" class="skel-layers-ignoreHref"><span class="icon fa-github">Code</span></a></li>
+        <li><a href="mailto:concinte@gmail.com" id="Mail-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+        <!--<li><a href="/projects/index.html" id="Myprojects-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Projects</span></a></li>-->
+
+</ul>
+
+
+						</nav>
+
+				</div>
+
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+
+				<!-- Projects -->
+					<section id="project" class="two">
+						<div class="container">
+
+							<header>
+
+								<h2><a href="/project/2016/02/22/crime.html">StaySafeNYC App</a></h2>
+
+							</header>
+
+							<p><h3 id="motivation">Motivation</h3>
+<p>While there are many applications available that provide statistics on crime in New York City, it is not easy to find any that provide those statistics at the city block or several city blocks level. The recent publishing of detailed incident-level data by the NYPD on violent crime in all the five boroughs of New York City, for the 2015 calendar year, have provided a unique opportunity to analyze crime rates for different parts of the city. The very high spatial and temporal granularity of the data means that rather than aggregating crime rates to the neighborhood or borough level, as is often the case, one can look at trends to within 2-3 city blocks and maybe in the process be able to identify potential crime hotspots. In addition, by mapping each crime incident to a census tract which is the smallest census unit for which detailed demographic data is available, one  is able to extract demographic information for each crime location. 
+The possibility of using this data to extract meaningful insights was therefore my primary motivation. I also saw this as an opportunity to build an interactive tool that the user could use to get a better understanding of the crime rates in his or her neighborhood. Ultimately, I hope to incorporate a prediction engine that will provide the user with a prediction on the possibility of falling victim to a violent crime at a given location, on a specific date and time.</p>
+
+<h4 id="how-it-works">How it Works:</h4>
+
+<p>A user enters a request on the webform, in the form of a street address. Using the google API, the street address is geocoded into latitude and longitude coordinates which are then converted into a census block number using the Federal Communication Commission (FCC) API. From this census block number, an 11-digit number corresponding to the census tract GEOID is extracted and used in the query to a MySQL database to obtain crime and demographic information for that census tract. The results from the database are used to compute the average crime rates for the census tract as well as for the borough of the street address entered, and the whole of New York city. The crime rates are computed per 1000 people, and for each class of violent crime, i.e., burglary, robbery, murder, grand lacerny, rape, felony assault, and grand lacerny of motor vehicle. The results are then graphed in an interactive chart using the D3.js JavaScript visualization library. In addition, a map is generated showing the location of each crime incident, the date and time of occurence, and the nature of the incident, for all crimes that occured within the census tract.</p>
+
+<p><em>The chart below provides a summary of the data flow in the application.</em></p>
+
+<p><img src="/assets/images/AppChart_0.png" alt="Application Flow Chart" class="center-image" /></p>
+
+<p><em>Below is a summary of the development to production workflow and the resources utilized.</em></p>
+
+<p><img src="/assets/images/AppChart_1.png" alt="Deployment Flow Chart" class="center-image" /></p>
+
+<h3 id="technologies-applied">Technologies Applied:</h3>
+
+<h4 id="front-end">Front end:</h4>
+<p>JavaScript; jQuery, a JavaScript library; D3.js, a JavaScript visualization library; ColorBrewer (to generate color schemes); Google Maps; Bootstrap for templating; CSS; HTML</p>
+
+<h4 id="back-end">Back end:</h4>
+<p>MySQL database; Flask, a Python based web framework built on Werkzeug and Jinja2; Gunicorn, a WSGI application server that takes requests from Nginx for dynamic content and passes these requests to Flask; Python libraries – NumPy, Pandas, SciPy; Supervisor for process automation</p>
+
+<h4 id="others">Others:</h4>
+<p>Google API for geocoding; FCC API for location GEOID; Amazon Web Services (AWS) for production deployment; Git for version control; Jupyter Notebook for testing features and APIs</p>
+
+<h3 id="predictive-engine">Predictive Engine</h3>
+<p>I am currently working on a predictive engine component to the app. To extract features for a logistic regression model, I am combining data from two sources: (1) The incident level crime data used in this app to provide location and time features, and the mapping of each crime incident to a census tract to provide demographic features. (2) Harvesting geotagged tweets using the twitter public API for a bounding box of coordinates defined for the New York City latitude-longtitude coordinates will allow me to add features based on sentiment analysis on the tweets. The idea is to score each geotagged tweet for negativity based on a dictionary of words associated with crime or crime incident. Geotagged tweets also encode information about the dynamics of a location, i.e., the number of people moving in and out of a place at a given time. I intend to leverage these data too to provide additional features to the model.</p>
+
+<h3 id="visit-the-app-bstaysafenychttpwwwstaysafenyccomb">Visit the App <b><a href="http://www.staysafenyc.com/">StaySafeNYC</a></b></h3>
+<p>Scripts and notebooks related to this analysis can be found in <b><a href="https://github.com/amwai/StaySafeNYC_Scripts/">this</a></b> GitHub repository.</p>
+</p>
+
+
+						</div>
+					</section>
+
+
+			</div>
+
+		<!-- Footer -->
+			<!--<div id="footer">
+
+				<ul class="copyright">
+
+	<li>&copy; 2015 Alex Mwai</li><li>Unless otherwise noted, all content under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</li><li>Built with <a href="https://jekyllrb.com/"> Jekyll</a></li><li>Design by <a href="http://html5up.net">HTML5 UP</a></li>
+
+</ul>
+
+
+
+				<ul class="icons">
+
+	<li><a href="https://twitter.com/concinte" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://www.linkedin.com/in/alex-mwai-ph-d-b86b2129" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                                                        <li><a href="mailto:concinte@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+                                                        <li><a href="https://github.com/amwai" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                                                        <!--<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>-->
+                                                        <!--<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
+                                                        <!--<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>-->
+                                                </ul>
+
+
+			</div>-->
+	 	
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
